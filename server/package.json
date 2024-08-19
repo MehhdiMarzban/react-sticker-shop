@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json -d 2000 -p 9000 --host 192.168.8.114"
+    "start": "json-server --watch db.json -d 2000 -p 9000"
   },
   "keywords": [],
   "author": "",
@@ -13,3 +13,4 @@
     "json-server": "^0.17.1"
   }
 }
+

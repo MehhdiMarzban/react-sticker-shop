@@ -1,10 +1,10 @@
 const ApiAddresses = {
     FRONTEND_API : {
-        IP: "http://127.0.0.1",
+        IP: "http://localhost",
         PORT: 3000
     },
     BACKEND_API: {
-        IP: "http://127.0.0.1",
+        IP: "http://localhost",
         PORT: 9000
     }
 }
