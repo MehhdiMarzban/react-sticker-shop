@@ -1,0 +1,59 @@
+/* HTML: <div class="loader"></div> */
+.makeCenter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000ee;
+    z-index: 4000;
+    overflow: hidden;
+}
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.loader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.loader:before,
+.loader:after {
+    content: "";
+    height: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/30px 30px no-repeat #fff;
+    animation: l5 3s infinite;
+}
+
+@keyframes l5 {
+    0%,
+    11% {
+        background-position: 35% 35%;
+    }
+    14%,
+    36% {
+        background-position: 65% 35%;
+    }
+    38%,
+    61% {
+        background-position: 65% 65%;
+    }
+    64%,
+    86% {
+        background-position: 35% 65%;
+    }
+    88%,
+    100% {
+        background-position: 35% 35%;
+    }
+}

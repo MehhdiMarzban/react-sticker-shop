@@ -1,0 +1,1 @@
+export default {loader, container, makeCenter};
