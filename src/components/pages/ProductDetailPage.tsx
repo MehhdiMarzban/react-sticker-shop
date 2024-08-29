@@ -35,7 +35,7 @@ const ProductDetailPage: React.FC = () => {
                     <div className="block w-full mx-auto md:w-1/2 rounded md:my-0 md:ml-6">
                         <div className="h-full">
                             <img
-                                src={`../../../server/public/images/${product.sticker}`}
+                                src={`/pics/${product.sticker}`}
                                 className="transform duration-500 ease-in-out hover:scale-105 rounded-md mx-auto"
                                 alt={product.title}
                             />

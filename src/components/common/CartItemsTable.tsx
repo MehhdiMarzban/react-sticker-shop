@@ -36,7 +36,7 @@ const CartItemsTable: React.FC<{
                                         <div className="avatar">
                                             <div className="mask mask-squircle h-12 w-12">
                                                 <img
-                                                    src={`../../../server/public/images/${cartItem.sticker}`}
+                                                    src={`/pics/${cartItem.sticker}`}
                                                     alt={cartItem.title}
                                                 />
                                             </div>

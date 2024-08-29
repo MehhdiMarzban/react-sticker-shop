@@ -6,7 +6,7 @@ const Header = (): JSX.Element => {
         <div
             className="hero h-80 mb-4 z-50"
             style={{
-                backgroundImage: `url(../../../server/public/images/hero-min.png)`,
+                backgroundImage: `url(/pics/hero-min.png)`,
             }}>
             <div className="hero-overlay bg-opacity-70"></div>
             <div className="hero-content text-neutral-content text-center">

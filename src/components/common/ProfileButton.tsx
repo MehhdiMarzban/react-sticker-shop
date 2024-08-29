@@ -4,7 +4,7 @@ import Avatar from "../core/Avatar";
 const ProfileButton: React.FC = () => {
     return (
         <div className="dropdown dropdown-end">
-            <Avatar src={`../../../server/public/images/profile.png`} />
+            <Avatar src={`/pics/profile.png`} />
             <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
