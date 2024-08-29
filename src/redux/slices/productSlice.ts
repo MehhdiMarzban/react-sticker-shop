@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ProductsState } from "../../types";
 import { serviceFetchAllProducts, serviceFetchProductById } from "../../services";
-import { AxiosResponse } from "axios";
 import { RootState } from "../store";
 
 const initialState = {
@@ -24,7 +23,7 @@ const productsSlice = createSlice({
             })
             .addCase(fetchProducts.fulfilled, (state, action) => {
                 state.status = "idle";
-                state.entities = action.payload;
+                state.entities = action.payload as any;
             })
             .addCase(fetchProduct.pending, (state, action) => {
                 state.status = "loading";
@@ -34,20 +33,20 @@ const productsSlice = createSlice({
             })
             .addCase(fetchProduct.fulfilled, (state, action) => {
                 state.status = "idle";
-                state.prevProduct = action.payload;
+                state.prevProduct = action.payload as any;
             });
     },
 });
 
 export const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
-    const response: AxiosResponse = await serviceFetchAllProducts();
+    const response = await serviceFetchAllProducts();
     return response.data;
 });
 
 export const fetchProduct = createAsyncThunk(
     "/products/fetchProduct",
     async (productId: string) => {
-        const response: AxiosResponse = await serviceFetchProductById(productId);
+        const response = await serviceFetchProductById(productId);
         return response.data;
     }
 );
