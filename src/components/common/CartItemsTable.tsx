@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ApiAddresses, appTexts } from "../../constants";
+import { appTexts } from "../../constants";
 import { CartItem } from "../../types";
 import { PersianNumber, ProductInput } from "../core";
 
@@ -36,7 +36,7 @@ const CartItemsTable: React.FC<{
                                         <div className="avatar">
                                             <div className="mask mask-squircle h-12 w-12">
                                                 <img
-                                                    src={`${ApiAddresses.BACKEND_API.IP}:${ApiAddresses.BACKEND_API.PORT}/images/${cartItem.sticker}`}
+                                                    src={`../../../server/public/images/${cartItem.sticker}`}
                                                     alt={cartItem.title}
                                                 />
                                             </div>

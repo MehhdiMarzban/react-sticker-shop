@@ -1,7 +1,7 @@
 import { Product as ProductProps } from "../../types";
 import PersianNumber from "./PersianNumber";
 import styles from "./Product.module.css";
-import { ApiAddresses, appTexts } from "../../constants";
+import { appTexts } from "../../constants";
 import { Link } from "react-router-dom";
 
 const Product: ({ product }: { product: ProductProps }) => JSX.Element = ({ product }) => {
@@ -12,7 +12,7 @@ const Product: ({ product }: { product: ProductProps }) => JSX.Element = ({ prod
                 alt={altSticker}
                 src={
                     sticker
-                        ? `${ApiAddresses.BACKEND_API.IP}:${ApiAddresses.BACKEND_API.PORT}/images/${sticker}`
+                        ? `../../../server/public/images/${sticker}`
                         : "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
                 }
             />

@@ -1,12 +1,13 @@
-import axios from "axios";
-import { ApiAddresses } from "../constants";
-
-axios.defaults.baseURL = `${ApiAddresses.BACKEND_API.IP}:${ApiAddresses.BACKEND_API.PORT}`;
+import data from "../../server/db.json";
 
 export const serviceFetchAllProducts = () => {
-    return axios.get("/products");
+    return {data: data.products};
 };
 
 export const serviceFetchProductById = (productId: string) => {
-    return axios.get(`/products/${productId}`)
+    const product = data.products.find(product => product.id === productId);
+    if (!product) {
+        throw new Error("Product not found");
+    }
+    return {data: product}
 }

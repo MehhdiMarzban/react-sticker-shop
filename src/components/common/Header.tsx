@@ -1,4 +1,4 @@
-import { ApiAddresses, appTexts } from "../../constants";
+import { appTexts } from "../../constants";
 import { useTheme } from "../../hooks";
 const Header = (): JSX.Element => {
     const theme = useTheme();
@@ -6,7 +6,7 @@ const Header = (): JSX.Element => {
         <div
             className="hero h-80 mb-4 z-50"
             style={{
-                backgroundImage: `url(${ApiAddresses.BACKEND_API.IP}:${ApiAddresses.BACKEND_API.PORT}/images/hero-min.png)`,
+                backgroundImage: `url(../../../server/public/images/hero-min.png)`,
             }}>
             <div className="hero-overlay bg-opacity-70"></div>
             <div className="hero-content text-neutral-content text-center">

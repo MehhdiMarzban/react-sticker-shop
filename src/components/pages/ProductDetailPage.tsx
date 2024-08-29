@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 import { fetchedProductSelector, fetchProduct } from "../../redux/slices/productSlice";
 import { PersianNumber } from "../core";
-import { ApiAddresses, appTexts } from "../../constants";
+import { appTexts } from "../../constants";
 import { Product } from "../../types";
 import { addToCart } from "../../redux/slices/cartSlice";
 
@@ -35,7 +35,7 @@ const ProductDetailPage: React.FC = () => {
                     <div className="block w-full mx-auto md:w-1/2 rounded md:my-0 md:ml-6">
                         <div className="h-full">
                             <img
-                                src={`${ApiAddresses.BACKEND_API.IP}:${ApiAddresses.BACKEND_API.PORT}/images/${product.sticker}`}
+                                src={`../../../server/public/images/${product.sticker}`}
                                 className="transform duration-500 ease-in-out hover:scale-105 rounded-md mx-auto"
                                 alt={product.title}
                             />
